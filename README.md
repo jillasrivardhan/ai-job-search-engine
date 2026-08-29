@@ -185,5 +185,18 @@ npm run start    # Run the production build
 - Automated tests and CI
 
 ---
+## 📸 Screenshots
+
+### Dashboard Overview
+
+![Dashboard Overview](./docs/screenshots/dashboard-overview.png)
+
+### Ranked Job Matches
+
+![Ranked Job Matches](./docs/screenshots/ranked-job-matches-1.png)
+
+![Ranked Job Matches](./docs/screenshots/ranked-job-matches-2.png)
+
+![Ranked Job Matches](./docs/screenshots/ranked-job-matches-3.png)
 
 Built to make a student’s job search more focused, transparent, and actionable.
