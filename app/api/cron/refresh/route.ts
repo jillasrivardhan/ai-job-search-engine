@@ -1,0 +1,3 @@
+import { NextRequest, NextResponse } from "next/server";import { getProfile, replaceJobs } from "@/lib/db";import { collectAndScore } from "@/lib/jobs";
+export const runtime="nodejs";
+export async function GET(request:NextRequest){const secret=process.env.CRON_SECRET;if(!secret||request.headers.get("authorization")!==`Bearer ${secret}`)return NextResponse.json({error:"Unauthorized"},{status:401});const profile=getProfile();if(!profile)return NextResponse.json({ok:true,message:"No profile yet."});try{const jobs=await collectAndScore(profile);replaceJobs(jobs);return NextResponse.json({ok:true,updated:jobs.length});}catch(e){console.error(e);return NextResponse.json({error:"Scheduled refresh failed."},{status:500});}}
