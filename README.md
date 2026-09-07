@@ -893,7 +893,7 @@ If you add a formal open-source license, update this section accordingly.
 
 # 👨‍💻 Author
 
-**Jillas Rivardhan**
+**Jilla srivardhan**
 
 Interested in:
 
